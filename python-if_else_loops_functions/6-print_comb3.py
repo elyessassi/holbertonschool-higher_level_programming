@@ -2,5 +2,4 @@
 for i in range(8):
     for j in range((i + 1), 10):
         print(f"{i}{j}, ", end="")
-print("89")
-print("", end="")
+print(89)
