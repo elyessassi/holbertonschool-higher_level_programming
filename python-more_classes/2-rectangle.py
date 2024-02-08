@@ -53,7 +53,7 @@ class Rectangle:
     area instance attribute to get the area of a rectangle
     """
     def area(self):
-            return self.__height * self.__width
+        return self.__height * self.__width
     """
     perimeter instance attribute to get the perimeter of a rectangle
     """
