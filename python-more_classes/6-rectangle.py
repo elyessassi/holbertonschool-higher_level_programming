@@ -6,10 +6,12 @@ defining a class rectangle
 
 
 class Rectangle:
+    """
+    class attribute that holds the number of instances
+    """
     number_of_instances = 0
     """
     defining a class rectangle with width and height instance attributes
-    number_of_instances:used to know the number of instances created
 
     """
     def __init__(self, width=0, height=0):
