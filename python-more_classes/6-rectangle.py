@@ -16,7 +16,7 @@ class Rectangle:
         Rectangle.number_of_instances += 1
         self.__height = height
         self.__width = width
-        self.number_of_instances = Rectangle.number_of_instances
+        number_of_instances = Rectangle.number_of_instances
     """
     getter function for width
 
