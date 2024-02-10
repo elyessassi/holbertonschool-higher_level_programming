@@ -11,6 +11,8 @@ class Rectangle:
     """
     number_of_instances = 0
     print_symbol = "#"
+    __height = 0
+    __width = 0
 
     """
     defining a class rectangle with width and height instance attributes
@@ -108,6 +110,7 @@ class Rectangle:
     def square(cls, size=0):
         """
         return a rectangle instance that has size as input
+        
         Args:
             size (int): the size of the square
         Returns:
