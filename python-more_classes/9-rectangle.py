@@ -11,8 +11,6 @@ class Rectangle:
     """
     number_of_instances = 0
     print_symbol = "#"
-    __height = 0
-    __width = 0
 
     """
     defining a class rectangle with width and height instance attributes
