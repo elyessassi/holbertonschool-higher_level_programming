@@ -105,7 +105,9 @@ class Rectangle:
                 return rect_2
             else:
                 return rect_1
-
+    """
+    class method that returns a rectangle instance with equal width an height
+    """
     @classmethod
     def square(cls, size=0):
         return cls(size, size)
