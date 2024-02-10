@@ -107,10 +107,13 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """
-        return a rectangle instance that has size as input
+        create a square object with equal sides
+
         Args:
-            size (int): the size of the square
+            cls: The class itself.
+            size (int): The size of each side of the square. Default is 0
+
         Returns:
-            (Rectangle): rectangle instance
+            An instance of the class with equal length and width (a square)
         """
-        return (cls(size, size))
+        return cls(size, size)
