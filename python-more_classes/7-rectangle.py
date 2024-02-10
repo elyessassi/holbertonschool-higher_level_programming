@@ -10,9 +10,6 @@ class Rectangle:
     class attribute that holds the number of instances
     """
     number_of_instances = 0
-    """
-    class attribute that holds the symbol that is used to print the rectangle
-    """
     print_symbol = "#"
     """
     defining a class rectangle with width and height instance attributes
@@ -22,6 +19,7 @@ class Rectangle:
         self.__height = height
         self.__width = width
         Rectangle.number_of_instances += 1
+        self.print_symbol = Rectangle.print_symbol
 
     """
     getter function for width
@@ -79,7 +77,7 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 for j in range(self.width):
-                    print(Rectangle.print_symbol, end="")
+                    print(self.print_symbol, end="")
                 if i != (self.__height - 1):
                     print("")
             return ""
