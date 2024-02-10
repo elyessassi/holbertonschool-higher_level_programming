@@ -10,6 +10,9 @@ class Rectangle:
     class attribute that holds the number of instances
     """
     number_of_instances = 0
+    """
+    class attribute that holds the symbol that is used to print the rectangle
+    """
     print_symbol = "#"
     """
     defining a class rectangle with width and height instance attributes
