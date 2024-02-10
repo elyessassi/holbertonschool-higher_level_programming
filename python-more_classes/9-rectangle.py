@@ -110,7 +110,6 @@ class Rectangle:
     def square(cls, size=0):
         """
         return a rectangle instance that has size as input
-        
         Args:
             size (int): the size of the square
         Returns:
