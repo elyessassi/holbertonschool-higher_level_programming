@@ -105,14 +105,14 @@ class Rectangle:
                 return rect_2
             else:
                 return rect_1
-    """
-    class method that returns a rectangle instance with equal width an height
-    """
+
     @classmethod
     def square(cls, size=0):
-        if isinstance(size, int) is False:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            return cls(size, size)
+        """
+        return a rectangle instance that has size as input
+        Args:
+            size (int) : the size of the square
+        Returns:
+            (Rectangle) : rectangle instance
+        """
+        return cls(size, size)
