@@ -9,6 +9,7 @@ class Rectangle:
     """
     class attribute that holds the number of instances
     """
+
     number_of_instances = 0
     print_symbol = "#"
 
@@ -26,13 +27,16 @@ class Rectangle:
     getter function for width
 
     """
+
     @property
     def width(self):
         return self.__width
+
     """
     setter function for width
 
     """
+
     @width.setter
     def width(self, value):
         if isinstance(value, int) == 0:
@@ -40,17 +44,21 @@ class Rectangle:
         elif value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
     """
     getter function for height
 
     """
+
     @property
     def height(self):
         return self.__height
+
     """
     setter function for height
 
     """
+
     @height.setter
     def height(self, value):
         if isinstance(value, int) == 0:
@@ -58,14 +66,18 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
     """
     area instance attribute to get the area of a rectangle
     """
+
     def area(self):
         return self.__height * self.__width
+
     """
     perimeter instance attribute to get the perimeter of a rectangle
     """
+
     def perimeter(self):
         if self.__width == 0 or self.__height == 0:
             return 0
