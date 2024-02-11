@@ -17,6 +17,7 @@ class Rectangle:
     defining a class rectangle with width and height instance attributes
 
     """
+
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
@@ -96,7 +97,7 @@ class Rectangle:
             return ""
 
     def __repr__(self):
-        return (f"Rectangle({self.__width}, {self.__height})")
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         print("Bye rectangle...")
