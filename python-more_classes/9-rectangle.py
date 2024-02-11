@@ -83,7 +83,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         else:
-            return (self.__width + self.height) * 2
+            return (self.__width + self.__height) * 2
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
@@ -114,7 +114,7 @@ class Rectangle:
                 return rect_1
             elif rect_1.area() < rect_2.area():
                 return rect_2
-            else:
+            elif rect_1 == rect_2:
                 return rect_1
 
     @classmethod
