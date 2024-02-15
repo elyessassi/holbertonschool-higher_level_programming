@@ -3,17 +3,17 @@
 module that has rectangle class
 """
 from models.base import Base
-""""
-rectangle class
-Args:
-    width: width of rectangle
-    height: height of rectangle
-    x
-    y
-"""
 
 
 class Rectangle(Base):
+    """"
+    rectangle class
+    Args:
+        width: width of rectangle
+        height: height of rectangle
+        x
+        y
+    """
     __width = 0
     __height = 0
     __x = 0
