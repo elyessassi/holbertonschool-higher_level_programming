@@ -23,42 +23,42 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-        @property
-        def width(self):
-            """getter method for width"""
-            return self.__width
+    @property
+    def width(self):
+        """getter method for width"""
+        return self.__width
 
-        @width.setter
-        def width(self, width):
-            """setter method for width"""
-            self.__width = width
+    @width.setter
+    def width(self, width):
+        """setter method for width"""
+        self.__width = width
 
-        @property
-        def height(self):
-            """getter method for height"""
-            return self.__height
+    @property
+    def height(self):
+        """getter method for height"""
+        return self.__height
 
-        @height.setter
-        def height(self, height):
-            """setter method for height"""
-            self.__height = height
+    @height.setter
+    def height(self, height):
+        """setter method for height"""
+        self.__height = height
 
-        @property
-        def x(self):
-            """getter method for x"""
-            return self.__x
+    @property
+    def x(self):
+        """getter method for x"""
+        return self.__x
 
-        @x.setter
-        def x(self, x):
-            """setter method for x"""
-            self.__x = x
+    @x.setter
+    def x(self, x):
+        """setter method for x"""
+        self.__x = x
 
-        @property
-        def y(self):
-            """getter method for y"""
-            return self.__y
+    @property
+    def y(self):
+        """getter method for y"""
+        return self.__y
 
-        @y.setter
-        def y(self, y):
-            """setter method for y"""
-            self.__y = y
+    @y.setter
+    def y(self, y):
+        """setter method for y"""
+        self.__y = y
