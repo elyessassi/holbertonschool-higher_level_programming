@@ -8,6 +8,7 @@ from models.base import Base
 
 class Testbase(unittest.TestCase):
     """class for unit tests"""
+
     def test_case1(self):
         """case 1"""
         b1 = Base(10)
