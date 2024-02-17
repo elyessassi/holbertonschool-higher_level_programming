@@ -87,4 +87,8 @@ class Rectangle(Base):
         """a mathod to display the rectangle"""
         for i in range(self.__height):
             print(self.width * "#")
-        return ""
+
+    def __str__(self):
+        """instance method that retuns the attrinutes of the Object"""
+        str1 = f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
+        return str1 + f" - {self.__width}/{self.__height}"
