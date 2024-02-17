@@ -95,3 +95,14 @@ class Rectangle(Base):
         """instance method that retuns the attrinutes of the Object"""
         str1 = f"[Rectangle] ({self.id}) {self.__x}/{self.__y}"
         return str1 + f" - {self.__width}/{self.__height}"
+
+    def update(self, *args):
+        """instance method that updates attributes using arguments """
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
