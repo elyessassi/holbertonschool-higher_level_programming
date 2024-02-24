@@ -13,3 +13,18 @@ class Square(Rectangle):
     def __str__(self):
         """instance method that returns the attrinutes of the Object"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+
+    @property
+    def size(self):
+        """getter method for size"""
+        return self.width
+
+    @size.setter
+    def size(self, size):
+        """setter method for size"""
+        if not isinstance(size, int):
+            raise TypeError("width must be an integer")
+        elif size <= 0:
+            raise ValueError("width must be > 0")
+        self.height = size
+        self.width = size
