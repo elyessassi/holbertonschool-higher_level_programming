@@ -50,3 +50,8 @@ class Square(Rectangle):
                 self.x = kwargs.get('x')
             if (kwargs.get('y') is not None):
                 self.y = kwargs.get('y')
+
+    def to_dictionary(self):
+        """dictionnary method for square"""
+        dic = {"id": self.id, "x": self.x, "size": self.width, "y": self.y}
+        return dic
