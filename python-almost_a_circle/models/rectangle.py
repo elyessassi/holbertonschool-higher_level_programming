@@ -118,3 +118,10 @@ class Rectangle(Base):
                 self.x = kwargs.get('x')
             if (kwargs.get('y') is not None):
                 self.y = kwargs.get('y')
+
+    def to_dictionary(self):
+        """dictionnary method for rectangle"""
+        dic = {"x": self.x, "y": self.y, "id": self.id}
+        dic['height'] = self.height
+        dic["width"] = self.width
+        return dic
