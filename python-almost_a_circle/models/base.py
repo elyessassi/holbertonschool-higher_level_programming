@@ -4,6 +4,7 @@ script that manages id attributes
 """
 
 import json
+import os
 
 
 class Base:
@@ -51,9 +52,10 @@ class Base:
     def create(cls, **dictionary):
         """create an instance with dictionnary """
         from models.rectangle import Rectangle
+        from models.square import Square
         if cls == Rectangle:
             i = Rectangle(1, 2)
-        else:
+        elif cls == Square:
             i = cls(1)
         i.update(**dictionary)
         return i
@@ -62,10 +64,9 @@ class Base:
     def load_from_file(cls):
         """module that loads intances from JSON file"""
         mylist = []
-        try:
-            f = open(f"{cls.__name__}.json", "r", encoding="utf-8")
-        except FileNotFoundError:
-            return []
+        if os.path.isfile(f"{cls.__name__}.json") is False:
+            return mylist
+        f = open(f"{cls.__name__}.json", "r")
         container = cls.from_json_string(f.read())
         for i in container:
             mylist.append(cls.create(**i))
