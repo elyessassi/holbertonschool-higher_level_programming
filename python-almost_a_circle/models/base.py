@@ -4,6 +4,7 @@ script that manages id attributes
 """
 
 import json
+import os
 
 
 class Base:
@@ -27,3 +28,15 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """ a class method that writes the JSON
+        string representation of a list of objects to a file"""
+        if list_objs is None:
+            list_objs = []
+        else:
+            for i in range(len(list_objs)):
+                list_objs[i] = list_objs[i].to_dictionary()
+        with open(f"{cls.__name__}.json", "w") as f:
+            json.dump(list_objs, f)
