@@ -46,10 +46,10 @@ class Base:
             return []
         else:
             return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """create an instance with dictionnary"""
-        i = cls(1, 2)
+        i = cls(1, 2, 5, 7, 9)
         i.update(**dictionary)
         return i
