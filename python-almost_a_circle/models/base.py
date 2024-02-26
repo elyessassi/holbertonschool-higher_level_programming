@@ -51,7 +51,6 @@ class Base:
     def create(cls, **dictionary):
         """create an instance with dictionnary """
         from models.rectangle import Rectangle
-        from models.square import Square
         if cls == Rectangle:
             i = Rectangle(1, 2)
         else:
