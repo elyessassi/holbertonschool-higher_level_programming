@@ -30,7 +30,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """a class method  """
+        """save a list of obj to a file (Json format) """
         if list_objs is None:
             list_objs = []
         else:
@@ -38,3 +38,5 @@ class Base:
                 list_objs[i] = list_objs[i].to_dictionary()
         with open(f"{cls.__name__}.json", "w") as f:
             f.write(cls.to_json_string(list_objs))
+
+    @staticmethod
