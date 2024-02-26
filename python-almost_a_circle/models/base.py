@@ -57,3 +57,16 @@ class Base:
             i = cls(1)
         i.update(**dictionary)
         return i
+
+    @classmethod
+    def load_from_file(cls):
+        """module that loads intances from JSON file"""
+        mylist = []
+        try:
+            f = open(f"{cls.__name__}.json", "r")
+        except FileNotFoundError:
+            return []
+        container = cls.from_json_string(f.read())
+        for i in range(len(container)):
+            mylist.append(cls.create(**container[i]))
+        return mylist
