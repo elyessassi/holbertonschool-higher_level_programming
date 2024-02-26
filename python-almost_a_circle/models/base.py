@@ -4,7 +4,6 @@ script that manages id attributes
 """
 
 import json
-import os
 
 
 class Base:
