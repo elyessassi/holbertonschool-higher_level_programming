@@ -50,6 +50,6 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """create an instance with dictionnary"""
-        i = cls(1, 2, 5, 7, 9)
+        i = cls(1, 2, 5)
         i.update(**dictionary)
         return i
