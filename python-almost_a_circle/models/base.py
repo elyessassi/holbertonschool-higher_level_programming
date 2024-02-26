@@ -63,7 +63,7 @@ class Base:
         """module that loads intances from JSON file"""
         mylist = []
         try:
-            f = open(f"{cls.__name__}.json", "r")
+            f = open(f"{cls.__name__}.json", "r", encoding="utf-8")
         except FileNotFoundError:
             return []
         container = cls.from_json_string(f.read())
