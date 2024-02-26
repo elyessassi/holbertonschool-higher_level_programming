@@ -66,8 +66,8 @@ class Base:
         mylist = []
         if os.path.isfile(f"{cls.__name__}.json") is False:
             return mylist
-        f = open(f"{cls.__name__}.json", "r")
-        container = cls.from_json_string(f.read())
+        with open(f"{cls.__name__}.json", "r") as f:
+            container = cls.from_json_string(f.read())
         for i in container:
             mylist.append(cls.create(**i))
         return mylist
