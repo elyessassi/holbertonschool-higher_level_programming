@@ -67,6 +67,6 @@ class Base:
         except FileNotFoundError:
             return []
         container = cls.from_json_string(f.read())
-        for i in range(len(container)):
-            mylist.append(cls.create(**container[i]))
+        for i in container:
+            mylist.append(cls.create(**i))
         return mylist
