@@ -37,4 +37,4 @@ class Base:
             for i in range(len(list_objs)):
                 list_objs[i] = list_objs[i].to_dictionary()
         with open(f"{cls.__name__}.json", "w") as f:
-            json.dump(list_objs, f)
+            f.write(cls.to_json_string(list_objs))
