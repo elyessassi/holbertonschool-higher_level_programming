@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS second (
   name VARCHAR(256),
   score INT
 );
+
 INSERT INTO second (id, name, score)
 VALUES
 	(1, 'John', 10),
